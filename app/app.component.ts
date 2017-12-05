@@ -1,36 +1,39 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { gridData1 } from './data';
-import { ButtonModule } from '@syncfusion/ej2-ng-buttons'
-import { GridComponent, ToolbarService, EditService, PageService } from '@syncfusion/ej2-ng-grids';
+import { data } from './data';
+import { GridComponent, EditSettingsModel, ToolbarItems } from '@syncfusion/ej2-ng-grids';
 
 @Component({
-    selector: 'my-app',
-    template: `  
-    <ej-grid #grid [dataSource]='data' allowPaging='true' [pageSettings]='pageSettings' [editSettings]='editSettings' [toolbar]='toolbar'>    
-        <e-columns>
-            <e-column field='OrderID' headerText='Order ID' [visible]='true' width='120' textAlign="right" isPrimaryKey='true' [validationRules]='orderidrules'></e-column>
-            <e-column field='CustomerID' headerText='Customer ID' width='120' [validationRules]='customeridrules'></e-column>
-            <e-column field='Freight' headerText='Freight' width='120' format='C2' textAlign="right" editType='numericedit' [validationRules]='freightrules'></e-column>
-            <e-column field='ShipName' headerText='Ship Name' width='170'></e-column>
-            <e-column field='ShipCountry' headerText='Ship Country' width='150' editType='dropdownedit' [edit]='editparams'></e-column>
-        </e-columns>
-    </ej-grid>
-                `,
-    providers: [ ToolbarService, EditService, PageService]
+    selector: 'app-container',
+    template: `<ej-grid #grid [dataSource]='data'  (actionComplete)= 'actioncomplete($event)' [editSettings]='editSettings' [toolbar]='toolbar' height='273px'>
+                <e-columns>
+                    <e-column field='OrderID' headerText='Order ID' textAlign='right' [visible]='true' [isPrimaryKey]='true' width=100></e-column>
+                    <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+                    <e-column field='Freight' headerText='Freight' textAlign= 'right' width=120 format= 'C2'></e-column>
+                    <e-column field='EmployeeID' headerText='EmployeeID' width=150></e-column>
+                </e-columns>
+                </ej-grid>`
 })
 export class AppComponent implements OnInit {
 
     public data: Object[];
-    public index: number;
-    public editSettings: Object;
-    public toolbar: any;
-
+    public editSettings: EditSettingsModel;
+    public toolbar: ToolbarItems[];
     @ViewChild('grid')
     public grid: GridComponent;
-   
     ngOnInit(): void {
-        this.data = gridData1;        
-        this.editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'inline' };        
-        this.toolbar = ['add', 'edit', 'delete', 'update', 'cancel', 'Custom Text', { text: 'Custom Item Model', tooltipText: 'Custom Item Model', id: 'custom' }];
-    }     
+        this.data = data;
+        this.editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
+        this.toolbar = ['add', 'edit', 'delete', 'update', 'cancel'];
+    }
+    public uniqueValue: number = 10252;
+    actioncomplete(args: any) {
+        switch (args.requestType) {
+            case 'save':
+                if (args.action == 'add' && args.data) {
+                    this.uniqueValue++;
+                    args.data.OrderID = this.uniqueValue;
+                }
+                break;
+        }
+    }
 }

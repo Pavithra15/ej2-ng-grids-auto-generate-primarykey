@@ -20,7 +20,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, ej2_ng_grids_1.GridModule, ej2_ng_buttons_1.ButtonModule, ej2_ng_navigations_1.ToolbarModule, forms_1.FormsModule],
+        imports: [platform_browser_1.BrowserModule, ej2_ng_grids_1.GridModule, ej2_ng_buttons_1.ButtonModule, ej2_ng_navigations_1.ToolbarModule],
         declarations: [app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent],
         providers: [ej2_ng_grids_1.PageService, ej2_ng_grids_1.SelectionService, ej2_ng_grids_1.SortService, ej2_ng_grids_1.ToolbarService, ej2_ng_grids_1.FilterService, ej2_ng_grids_1.EditService]

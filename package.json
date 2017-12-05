@@ -1,5 +1,5 @@
 {
-  "name": "ej2-grid-angular-webpack",
+  "name": "ej2-ng-grid-auto-generated-primarykey",
   "version": "0.0.1",
   "description": "Syncfusion Angular Grid with webpack",
   "main": "index.js",
@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Madhust/ej2-grid-angular-webpack.git"
+    "url": "git+https://github.com/Pavithra15/ej2-grids-sample.git"
   },
-  "author": "Hariharan",
+  "author": "Pavithra",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "~4.0.0",
@@ -30,16 +30,16 @@
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",
     "zone.js": "^0.8.4",
-    "@syncfusion/ej2-ng-grids": "^1.0.17",
+    "@syncfusion/ej2-ng-grids": "*",
     "@syncfusion/ej2-ng-buttons": "*",
     "@syncfusion/ej2-ng-navigations": "*"
   },
   "devDependencies": {
+    "@types/core-js": "^0.9.42",
+    "@types/node": "^6.0.46",
     "lite-server": "^2.2.2",
     "rimraf": "^2.5.2",
-    "typescript": "2.3.3",
-    "@types/node": "^6.0.46",
-    "@types/core-js": "^0.9.42",
+    "typescript": "^2.4.2",
     "webpack": "^2.2.1"
   }
 }
