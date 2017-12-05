@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
         this.editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
         this.toolbar = ['add', 'edit', 'delete', 'update', 'cancel'];
     }
-    public uniqueValue: number = 10252;
+    public uniqueValue: number = 10566;
     actioncomplete(args: any) {
         switch (args.requestType) {
             case 'save':
