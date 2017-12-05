@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
 var ej2_ng_grids_1 = require("@syncfusion/ej2-ng-grids");
 var ej2_ng_buttons_1 = require("@syncfusion/ej2-ng-buttons");
 var ej2_ng_navigations_1 = require("@syncfusion/ej2-ng-navigations");

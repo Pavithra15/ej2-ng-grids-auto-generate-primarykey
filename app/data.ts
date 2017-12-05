@@ -188,7 +188,7 @@ export let employeeData: Object[] = [{
     'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
 }];
 
-export let OrderData = [{
+export let gridData1 = [{
         OrderID:        10280,
         CustomerID:     "BERGS",
         EmployeeID:     2,

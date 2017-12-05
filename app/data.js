@@ -188,7 +188,7 @@ exports.employeeData = [{
         'ReportsTo': 5,
         'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
     }];
-exports.OrderData = [{
+exports.gridData1 = [{
         OrderID: 10280,
         CustomerID: "BERGS",
         EmployeeID: 2,

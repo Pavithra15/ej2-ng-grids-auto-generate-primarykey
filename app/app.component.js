@@ -17,7 +17,7 @@ var AppComponent = /** @class */ (function () {
         this.uniqueValue = 10252;
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.data = data_1.data;
+        this.data = data_1.gridData1;
         this.editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
         this.toolbar = ['add', 'edit', 'delete', 'update', 'cancel'];
     };
@@ -31,7 +31,7 @@ var AppComponent = /** @class */ (function () {
                 break;
         }
     };
-    __decorate([
+   __decorate([
         core_1.ViewChild('grid'),
         __metadata("design:type", ej2_ng_grids_1.GridComponent)
     ], AppComponent.prototype, "grid", void 0);

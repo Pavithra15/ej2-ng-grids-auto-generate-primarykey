@@ -10,6 +10,11 @@
     "dev": "node ./node_modules/lite-server/bin/lite-server",
     "start": "npm run rmf && npm run build & npm run bundle & npm run dev"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pavithra15/ej2-grids-sample.git"
+  },
+  "author": "Pavithra",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "~4.0.0",
